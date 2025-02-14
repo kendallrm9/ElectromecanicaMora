@@ -1,9 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Electromecanica Mora</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+          <!-- Logo -->
+          <a class="navbar-brand" href="index.html">
+            <img src="img/logo.png" alt="Logo" class="img-fluid" />
+          </a>
+
+          <!-- Botón de menú en móviles -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasMenu"
+            aria-controls="offcanvasMenu"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Menú normal en pantallas grandes -->
+          <div class="collapse navbar-collapse justify-content-center">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link nav-color" href="#">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-color" href="#">CAPACITACIONES</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-color" href="#">NOSOTROS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link nav-color" href="#">CONTÁCTANOS</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Botón de acción -->
+          <div class="d-none d-lg-block">
+            <button class="btn btn-danger nav-color shadow-sm">
+              SOLICITAR SERVICIO
+            </button>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Menú lateral para móviles -->
+      <div
+        class="offcanvas offcanvas-start d-lg-none"
+        tabindex="-1"
+        id="offcanvasMenu"
+        aria-labelledby="offcanvasMenuLabel"
+      >
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title titulo-menu" id="offcanvasMenuLabel ">
+            Menú
+          </h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Cerrar"
+          ></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link nav-color" href="#">SERVICIOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-color" href="#">CAPACITACIONES</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-color" href="#">NOSOTROS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-color" href="#">CONTÁCTANOS</a>
+            </li>
+          </ul>
+          <div class="mt-3">
+            <button class="btn btn-danger w-100 nav-color">
+              SOLICITAR SERVICIO
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="banner shadow-lg">
+      <div class="fondo-banner">
+        <h1 class="titulo-banner">Somos Electromécanica Mora</h1>
+        <p class="parrafo-banner">
+          Tu aliado en soluciones técnicas y profesionales. Descubre nuestros
+          servicios de taller, asesoría, consultoría y capacitación, todo en un
+          solo lugar.
+        </p>
+        <button class="btn btn-warning btn-banner">Contáctanos</button>
+      </div>
+    </section>
+
+    <section></section>
+
+    <!-- Agregar Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
