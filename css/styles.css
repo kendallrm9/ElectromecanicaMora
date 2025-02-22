@@ -1,12 +1,11 @@
-/* Estilo general */
+/* Estilos Generales */
 body {
-  /* font-family: monospace; */
-  font-family: "Poppins", serif;
+  font-family: "Lexend", serif;
 }
 
-/* Estilos de navegación */
+/* Estilos de Navegación */
 nav {
-  position: relative;
+  margin: 0;
 }
 
 .titulo-menu {
@@ -17,22 +16,36 @@ nav {
 }
 
 .navbar-brand img {
-  height: 130px;
+  height: 90px;
   width: auto;
   object-fit: contain;
 }
 
-.nav-color {
+ul {
   font-weight: bold;
 }
 
-li .nav-color {
-  position: relative;
-  display: inline-block;
-  padding-bottom: 5px; /* Espacio para evitar que el contenido se mueva */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
 }
 
-li .nav-color::after {
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 5px; /* Espacio para evitar que el contenido se mueva */
+  position: relative;
+  display: inline-block;
+}
+
+nav ul li a::after {
   content: "";
   position: absolute;
   width: 0;
@@ -43,127 +56,136 @@ li .nav-color::after {
   transition: width 0.3s ease, left 0.3s ease;
 }
 
-li .nav-color:hover::after {
+nav ul li a:hover::after {
   width: 100%;
   left: 0;
 }
 
-/* Estilos del banner */
+/* Estilos del Banner */
 .banner {
   width: 100%;
-  height: 50vh;
-  background: url("/img/img-banner.jpg") center/cover no-repeat;
+  height: 80vh;
+  background: url("../img/elegir-buen-mecanico-blog-Bardahl.jpg") center/cover
+    no-repeat;
   color: white;
 }
 
 .fondo-banner {
-  background-color: rgba(0, 0, 0, 0.459);
+  background-color: white;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
-  width: 50%;
+  gap: 1.5rem;
+  max-width: 860px;
   height: 100%;
-  padding: 20px;
+  padding: 50px 30px;
+  margin: 0 auto;
+  margin-top: -256px;
+  border-radius: 40px;
 }
 
 .titulo-banner {
-  font-weight: 800;
-  color: #3ab2f8;
+  font-weight: 400;
+  /* color: #3ab2f8; */
   text-align: center;
-  font-family: "Poppins", serif;
-  font-weight: 900;
-  font-style: italic;
+  font-size: 60px;
+  /* font-style: italic; */
 }
 
 .parrafo-banner {
-  text-align: justify;
+  text-align: center;
   font-size: 20px;
-  max-width: 600px;
-  font-weight: 500;
+  color: #111111;
+  font-family: "Questrial", serif;
+  /* font-weight: 500; */
 }
 
 .btn-banner {
+  border: none;
+  font-size: 1.25rem;
+  padding: 12px 53px;
+  font-weight: 600;
+  color: white;
+  border-radius: 100px;
+  background-color: #dc3545;
+  font-family: "Questrial", serif;
+  transition: background-color 0.4s;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.btn-banner:hover {
+  background-color: black;
+}
+
+.flecha-banner {
+  font-size: 1.5rem;
+  justify-content: center;
   font-weight: bold;
-  font-size: 20px;
 }
 
 /* Media Queries */
 
-/* Pantallas medianas (max-width: 991px) */
-@media (max-width: 991px) {
-  .navbar-brand img {
-    position: absolute;
-    top: 65px;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    height: 140px;
-  }
-
-  .banner {
-    height: 40vh;
-    margin-top: 75px;
-  }
-
-  .fondo-banner {
-    width: 100%;
-  }
-}
-
-/* Pantallas pequeñas (max-width: 560px) */
-@media (max-width: 560px) {
-  .navbar-brand img {
-    height: 110px;
-    top: 50px;
-  }
-
-  .banner {
-    height: 38vh;
-    margin-top: 45px;
-  }
-
-  .parrafo-banner {
-    font-size: 15px;
-    width: 100%;
-  }
-
-  .btn-banner {
-    font-size: 15px;
-  }
-
-  .titulo-banner {
-    font-size: 1.4rem;
-  }
-}
-
-.fondo-banner {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: aparecerDesdeIzquierda 1s ease-out forwards;
-}
-
-@keyframes aparecerDesdeIzquierda {
-  from {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
+/* Estilos de Imágenes */
 .img-trac {
   height: auto;
   width: 100%;
   object-fit: contain;
   border-radius: 20px;
-  /* padding: 10px; */
 }
 
+.custom-card img {
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+/* Estilos de Card */
+.custom-card {
+  border-radius: 30px;
+}
+
+.card {
+  transition: all 0.3s ease;
+  box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .content {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Fondo de Card */
+.fondo-card {
+  background-color: #3ab2f8b6;
+  width: 100%;
+  border-radius: 0 0 30px 30px;
+  color: white;
+  border-top-left-radius: 12%;
+  border-top-right-radius: 12%;
+  height: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 5%;
+}
+
+.card-img-overlay {
+  padding: 0;
+}
+
+/* Estilos para el Contenido de Tracking */
 .trac-titulo {
-  font-size: 26px;
+  font-size: 28px;
   color: #dc3545;
   font-weight: 500;
 }
@@ -180,11 +202,204 @@ li .nav-color:hover::after {
   text-align: center;
   width: 100px;
 }
+
 .trac-numeros > p:first-child {
   font-weight: bold;
   font-size: 20px;
 }
+
 .trac-numeros > p:nth-of-type(2) {
-  font-size: 14px;
+  font-size: 12px;
   margin-bottom: 0;
+}
+
+/* Servicios */
+.servicios {
+  font-size: 24px;
+  border: 2px solid #dc3545;
+  display: inline-block;
+  padding: 0 6px;
+  font-weight: 600;
+}
+
+/* Animaciones */
+/* .fondo-banner {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: aparecerDesdeIzquierda 1s ease-out forwards;
+}
+
+@keyframes aparecerDesdeIzquierda {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+} */
+
+.logo-footer {
+  height: 130px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Pantallas medianas (max-width: 991px) */
+@media (max-width: 950px) {
+  .banner {
+    height: 84vh;
+    /* margin-top: 75px; */
+  }
+
+  .fondo-banner {
+    width: 90%;
+  }
+  .titulo-banner {
+    font-size: 45px;
+  }
+
+  .navbar-brand img {
+    height: 110px;
+    top: 50px;
+  }
+}
+/* Pantallas pequeñas (max-width: 560px) */
+@media (max-width: 560px) {
+  .ocultar-btn {
+    display: none;
+  }
+  .fondo-banner {
+    width: 90%;
+  }
+  .banner {
+    height: 70vh;
+  }
+
+  .titulo-banner {
+    font-size: 30px;
+  }
+  .parrafo-banner {
+    font-size: 16px;
+  }
+
+  .btn-banner {
+    font-size: 16px;
+    width: 100%;
+    padding: 18px 37px 18px 36px;
+  }
+
+  .flecha-banner {
+    font-size: 1.2rem;
+  }
+
+  .trac-titulo {
+    font-size: 1.4rem;
+  }
+
+  .trac-parrafo {
+    font-size: 14px;
+  }
+
+  .servicios {
+    font-size: 1.4rem;
+  }
+  .card {
+    margin: 0 20px;
+  }
+}
+
+.icono {
+  font-size: 18px;
+  margin-right: 10px;
+  color: #bb2d3b;
+}
+.footer-linea {
+  padding: 0px 0px 15px 0px;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #ffffff1a;
+  border-radius: 0px 0px 0px 0px;
+}
+/* Estilo para el botón flotante */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  background-color: #dc3545;
+}
+.scroll-top-btn:hover {
+  background-color: #c40b0bea;
+}
+
+.footer-linea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.icono {
+  font-size: 1.2rem;
+  color: #f0a500;
+}
+
+footer h5 {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #f0a500;
+}
+
+footer a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  transition: color 0.3s ease-in-out;
+  padding: 0px 0px 15px 0px;
+  border-style: solid;
+  border-width: 0px 0px 1px 0px;
+  border-color: #ffffff1a;
+  border-radius: 0px 0px 0px 0px;
+}
+
+footer a:hover {
+  color: #f0a500;
+}
+
+@media (max-width: 768px) {
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+.icon-social {
+  font-size: 24px;
+}
+.btn-header {
+  border: none;
+  padding: 10px 24px;
+  border-radius: 20px;
+  color: white;
+  background-color: #dc3545;
+  font-weight: 500;
+  transition: background-color 0.3s;
+  font-family: "Questrial", serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+}
+.btn-header:hover {
+  background-color: #c40b0bea;
 }
