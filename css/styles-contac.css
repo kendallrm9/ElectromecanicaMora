@@ -1,0 +1,170 @@
+.contenedor-banner {
+  width: 100%;
+  height: 40vh;
+  background: url("../img/screw-4929719_1280.jpg") center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.fondo-contac {
+  width: 100%;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.308);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 60px;
+  font-family: Lexend;
+}
+
+.color-1 {
+  background-color: #dc3545;
+  height: 200px;
+}
+.color-2 {
+  background-color: white;
+  height: 200px;
+}
+.color-3 {
+  background-color: #dc3545;
+  height: 200px;
+}
+.color-4 {
+  background-color: white;
+  height: 200px;
+}
+h3 {
+  font-weight: 600;
+}
+.parrafo-info {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.color-1,
+.color-2,
+.color-3,
+.color-4 {
+  padding: 18px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border: black solid 1px;
+}
+
+.contact-container {
+  text-align: left;
+  padding: 20px;
+  width: 80%;
+}
+
+.titulo-form {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.line {
+  width: 40px;
+  height: 3px;
+  background-color: #dc3545;
+  margin-bottom: 15px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  background: white;
+  color: black;
+  font-size: 14px;
+}
+
+.btn-form {
+  background-color: #dc3545;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100px;
+}
+
+.btn-form:hover {
+  background-color: #c0392b;
+}
+@media screen and (max-width: 992px) {
+  .color-2 {
+    background-color: white;
+    height: 200px;
+  }
+  .color-3 {
+    background-color: white;
+    height: 200px;
+  }
+  .color-4 {
+    background-color: #dc3545;
+    height: 200px;
+  }
+  .contenedor-banner {
+    height: 25vh;
+  }
+  .contact-container {
+    width: 100%;
+  }
+}
+
+div i {
+  font-size: 50px;
+}
+
+@media screen and (max-width: 576px) {
+  .color-2 {
+    background-color: white;
+    height: 200px;
+  }
+  .color-3 {
+    background-color: #dc3545;
+    height: 200px;
+  }
+  .color-4 {
+    background-color: white;
+    height: 200px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  div i {
+    font-size: 40px;
+  }
+}
+
+iframe {
+  height: 600px;
+  width: 100%;
+}
+.fondo-form-2 {
+  padding: 0 0 !important;
+}
+.fondo-form-1 {
+  background-color: #292f33;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 1%;
+}

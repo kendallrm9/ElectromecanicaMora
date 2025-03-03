@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Electromecanica Mora</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon" />
     <!-- animaciones -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Fonts -->
     <link
       href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Questrial&display=swap"
       rel="stylesheet"
     />
-
+    <!-- Iconos -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link rel="stylesheet" href="css/reset.css" />
+    <!-- Estilos css -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -31,18 +33,22 @@
   <body>
     <div class="superponer" id="superponer" onclick="toggleMenu()"></div>
     <header>
-      <a class="navbar-brand" href="#"><img src="img/logo.jpg" alt="" /></a>
+      <a class="navbar-brand" href="index.html"
+        ><img src="img/logo.jpg" alt=""
+      /></a>
 
       <nav>
         <ul>
-          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="index.html#servicios">Servicios</a></li>
           <li><a href="#capacitaciones">Capacitaciones</a></li>
-          <li><a href="#nosotros">Nosotros</a></li>
-          <li><a href="#contactenos">Contáctenos</a></li>
+          <li><a href="pages/nosotros.html">Nosotros</a></li>
+          <li><a href="pages/contacto.html">Contáctenos</a></li>
         </ul>
       </nav>
       <div class="toggleMenu">
-        <button class="btn-header">Solicitar servicio</button>
+        <a class="btn-header" href="pages/contacto.html#solicitarServicio"
+          >Solicitar servicio</a
+        >
         <i
           class="fa-solid fa-bars menu-btn"
           id="ocultar"
@@ -54,38 +60,48 @@
     <div class="sidebar" id="sidebar">
       <i class="fa-solid fa-xmark close-btn" onclick="toggleMenu()"></i>
       <ul>
-        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="index.html#servicios">Servicios</a></li>
         <li><a href="#capacitaciones">Capacitaciones</a></li>
-        <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="#contactenos">Contáctenos</a></li>
+        <li><a href="pages/nosotros.html">Nosotros</a></li>
+        <li><a href="pages/contacto.html">Contáctenos</a></li>
       </ul>
     </div>
 
     <section class="banner shadow-lg mb-5"></section>
-    <div class="fondo-banner" data-aos="fade-right" data-aos-duration="1000">
+    <div class="fondo-banner" data-aos="fade-right" data-aos-duration="1500">
       <h1 class="titulo-banner">Servicios Electromecánicos de Calidad</h1>
       <p class="parrafo-banner">
         Tu socio estratégico en soluciones técnicas y profesionales. Explora
         nuestros servicios integrales de taller, asesoría, consultoría y
         capacitación, diseñados para brindarte la mejor atención.
       </p>
-      <button class="btn-banner" data-aos="fade-up" data-aos-duration="1000">
+      <a
+        class="btn-banner"
+        href="https://wa.me/88052907/?text=Gracias%20por%20contactarnos.%20Para%20cualquier%20consulta%20sobre%20nuestros%20servicios%20electromecánicos%20¡Escríbenos%20y%20con%20gusto%20te%20atenderemos!"
+        target="_blank"
+      >
         Hablemos Ahora <span class="flecha-banner">→</span>
-      </button>
+      </a>
     </div>
 
     <section class="container my-5">
       <div class="row">
         <div class="col-lg-6">
-          <img src="img/img-tractor.webp" alt="" class="img-trac shadow-lg" />
+          <img
+            src="img/img-tractor.webp"
+            alt=""
+            class="img-trac shadow-lg mb-4"
+            data-aos="fade-right"
+            data-aos-duration="1500"
+          />
         </div>
-        <div class="col-lg-6 mt-3">
+        <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1500">
           <h2 class="trac-titulo">
             Líderes en soluciones electromecánicas de alta calidad y tecnología
           </h2>
           <p class="trac-parrafo">
             En Electromecánica Mora, nos especializamos en ofrecer servicios
-            electromecánicos de primer nivel, utilizando lo ultimo tecnología y
+            electromecánicos de primer nivel, utilizando la ultima tecnología y
             garantizando soluciones eficaces.
           </p>
           <div class="trac-numeros-cont">
@@ -108,7 +124,11 @@
     <section class="container my-5">
       <h3 class="servicios" id="servicios">Nuestros servicios</h3>
       <div class="row mt-1 g-5">
-        <div class="col-lg-4 col-md-6">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
           <div class="card custom-card">
             <img
               src="img/img-asesoria.webp"
@@ -129,7 +149,11 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
           <div class="card custom-card">
             <img
               src="img/img-taller.webp"
@@ -150,29 +174,12 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-4 col-md-6">
-          <div class="card custom-card">
-            <img
-              src="img/img-capacitaciones.webp"
-              class="card-img-top"
-              alt="Asesoría"
-            />
-            <div
-              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
-            >
-              <div class="fondo-card">
-                <h4 class="card-title">Capacitaciones</h4>
-                <p class="card-text">
-                  Ofrecemos formación personalizada para mejorar habilidades,
-                  optimizar procesos y potenciar tu equipo.
-                </p>
-                <a href="#" class="btn btn-danger">Más Información</a>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-lg-4 col-md-6">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
           <div class="card custom-card">
             <img
               src="img/img-consultoria.webp"
@@ -193,6 +200,32 @@
             </div>
           </div>
         </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-12 col-md-6"
+        >
+          <div class="card custom-card">
+            <img
+              src="img/img-capacitaciones.webp"
+              class="card-img-top"
+              alt="Asesoría"
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <h4 class="card-title">Capacitaciones</h4>
+                <p class="card-text">
+                  Ofrecemos formación personalizada para mejorar habilidades,
+                  optimizar procesos y potenciar tu equipo.
+                </p>
+                <a href="#" class="btn btn-danger">Ver más</a>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -201,33 +234,46 @@
     >
       <div class="container row">
         <div class="col-lg-4 col-md-6 text-start">
-          <img src="img/img-footer.webp" alt="" class="logo-footer mb-4" />
+          <img
+            src="img/img-footer.webp"
+            alt="Logo footer"
+            class="logo-footer mb-4"
+          />
           <p class="footer-linea">
-            <i class="bi bi-geo-alt-fill icono"></i>Barrio El Salto, Liberia,
-            Guanacaste, Costa Rica
+            <i class="fa-solid fa-location-dot icono"></i>Barrio El Salto,
+            Liberia, Guanacaste, Costa Rica
           </p>
 
           <p class="footer-linea">
-            <i class="bi bi-envelope-fill icono"></i
+            <i class="fa-solid fa-envelope icono"></i
             >electromecanicamora82@gmail.com
           </p>
 
           <p class="footer-linea">
-            <i class="bi bi-whatsapp icono"></i>(+506) 6397-3626
+            <i class="fa-brands fa-whatsapp icono"></i>(+506) 6397-3626
           </p>
         </div>
         <div class="col-lg-4 col-md-6 mt-4">
-          <h5>Acceso Rápido</h5>
+          <h5 class="titulo-footer">Acceso Rápido</h5>
           <a>Servicios</a>
           <a>Capacitaciones</a>
           <a>Nosotros</a>
           <a>Contáctenos</a>
         </div>
-        <div class="col-lg-4 col-md-6 mt-4">
-          <h5>Redes sociales</h5>
-          <a><i class="bi bi-facebook icon-social"></i></a>
-          <a><i class="bi bi-instagram icon-social"></i></a>
-          <a><i class="bi bi-linkedin icon-social"></i></a>
+        <div class="col-lg-4 col-md-12 mt-4">
+          <img
+            src="img/whatsapp.png"
+            alt="icono whatsapp"
+            class="whatsapp-icon"
+          />
+          <h5 class="titulo-footer mt-3">¿Preguntas?</h5>
+          <p>
+            Contáctanos por WhatsApp para recibir <br />
+            respuestas rápidas y atención <br />
+            personalizada.
+          </p>
+
+          <button class="btn-footer">(+506) 6397-3626</button>
         </div>
       </div>
     </footer>
@@ -239,8 +285,5 @@
     <!-- animaciones -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>

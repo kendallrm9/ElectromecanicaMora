@@ -25,3 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   observer.observe(overlay, { attributes: true, attributeFilter: ["class"] });
 });
+
+AOS.init({
+  once: true,
+});

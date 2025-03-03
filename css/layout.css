@@ -1,12 +1,14 @@
 body {
+  overflow-x: hidden;
   transition: background 0.3s ease-in-out;
+  width: 100%;
 }
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #ffffff;
-  padding: 4px 10%;
+  padding: 6px 10%;
 }
 .logo {
   font-size: 1.5em;
@@ -38,21 +40,19 @@ header {
 @media screen and (max-width: 480px) {
   .btn-header {
     border: none;
-    padding: 5px 24px;
+    padding: 5px 20px;
     border-radius: 20px;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
     background-color: #dc3545;
     font-weight: 500;
     transition: background-color 0.3s;
-    font-family: "Questrial", serif;
     font-weight: 600;
-    letter-spacing: 2px;
+    /* letter-spacing: 2px; */
   }
 
   .navbar-brand img {
     height: 75px;
-    top: 50px;
   }
 }
 
@@ -103,7 +103,6 @@ header {
 }
 .sidebar ul li {
   padding: 10px;
-  /* border-bottom: 1px solid #444; */
 }
 .sidebar ul li a {
   color: white;
@@ -141,4 +140,10 @@ header {
 }
 .scroll-top-btn:hover {
   background-color: #c40b0bea;
+}
+
+.whatsapp-icon {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
 }
