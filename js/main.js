@@ -4,6 +4,7 @@ function toggleMenu() {
   sidebar.classList.toggle("show");
   overlay.classList.toggle("active");
 }
+
 function scrollToTop() {
   window.scrollTo({
     top: 0,
@@ -24,6 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   observer.observe(overlay, { attributes: true, attributeFilter: ["class"] });
+  
 });
 
 AOS.init({

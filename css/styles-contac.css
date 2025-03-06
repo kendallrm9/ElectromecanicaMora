@@ -16,13 +16,6 @@
   justify-content: center;
 }
 
-h2 {
-  color: white;
-  font-weight: 500;
-  font-size: 60px;
-  font-family: Lexend;
-}
-
 .color-1 {
   background-color: #dc3545;
   height: 200px;
@@ -130,7 +123,7 @@ select {
 }
 
 div i {
-  font-size: 50px;
+  font-size: 40px;
 }
 
 @media screen and (max-width: 576px) {
@@ -145,12 +138,6 @@ div i {
   .color-4 {
     background-color: white;
     height: 200px;
-  }
-  h2 {
-    font-size: 30px;
-  }
-  div i {
-    font-size: 40px;
   }
 }
 

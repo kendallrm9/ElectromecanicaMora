@@ -1,7 +1,7 @@
 body {
   overflow-x: hidden;
   transition: background 0.3s ease-in-out;
-  width: 100%;
+  /* width: 100%; */
 }
 header {
   display: flex;

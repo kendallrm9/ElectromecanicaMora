@@ -170,7 +170,7 @@ nav ul li a.active::after {
 
 /* Fondo de Card */
 .fondo-card {
-  background-color: #3ab2f8b6;
+  background-color: #19a7fab6;
   width: 100%;
   border-radius: 0 0 30px 30px;
   color: white;
@@ -247,6 +247,12 @@ nav ul li a.active::after {
   object-fit: contain;
 }
 
+h2 {
+  color: white;
+  font-weight: 500;
+  font-size: 60px;
+  font-family: Lexend;
+}
 /* Pantallas medianas (max-width: 991px) */
 @media (max-width: 950px) {
   .banner {
@@ -264,6 +270,9 @@ nav ul li a.active::after {
   .navbar-brand img {
     height: 110px;
     top: 50px;
+  }
+  h2 {
+    font-size: 45px;
   }
 }
 /* Pantallas pequeñas (max-width: 560px) */
@@ -311,6 +320,9 @@ nav ul li a.active::after {
   }
   .card {
     margin: 0 20px;
+  }
+  h2 {
+    font-size: 30px;
   }
 }
 
@@ -417,4 +429,57 @@ footer {
   cursor: pointer;
   font-size: 16px;
   /* width: 100px; */
+}
+
+/* ---------------------------- */
+footer {
+  background-color: #111; /* Un negro más sólido */
+  color: #ddd; /* Un gris claro para mejor lectura */
+  padding: 40px 0;
+}
+
+.footer-linea {
+  color: #bbb; /* Gris más tenue */
+  margin-bottom: 8px;
+}
+
+.icono {
+  color: #ffffff; /* Amarillo llamativo para iconos */
+  margin-right: 8px;
+}
+
+.titulo-footer {
+  color: #ffffff; /* Mantener el color amarillo en los títulos */
+}
+
+footer a {
+  display: block;
+  color: #bbb;
+  text-decoration: none;
+  margin-bottom: 6px;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+footer a:hover {
+  color: white;
+  text-decoration: underline;
+}
+
+.btn-footer {
+  background-color: #25d366; /* Verde de WhatsApp */
+  color: #fff;
+  border: none;
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin: 0 auto;
+  width: 160px;
+}
+
+.btn-footer:hover {
+  background-color: #1ebe57; /* Verde más oscuro */
+  transform: scale(1.05);
+  color: white;
 }

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Electromecanica Mora</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+
+    <link rel="shortcut icon" href="img/logo.jpg" type="image/x-icon" />
+    <!-- animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Questrial&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Estilos css -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/layout.css" />
+    <link rel="stylesheet" href="../css/styles-contac.css" />
+    <link rel="stylesheet" href="../css/syles-capac.css" />
+  </head>
+  <body>
+    <div class="superponer" id="superponer" onclick="toggleMenu()"></div>
+    <header>
+      <a class="navbar-brand" href="../index.html"
+        ><img src="../img/logo.jpg" alt=""
+      /></a>
+
+      <nav>
+        <ul>
+          <li><a href="../index.html#servicios">Servicios</a></li>
+          <li><a class="active" href="#">Capacitaciones</a></li>
+          <li><a href="../pages/nosotros.html">Nosotros</a></li>
+          <li><a href="../pages/contacto.html">Contáctenos</a></li>
+        </ul>
+      </nav>
+      <div class="toggleMenu">
+        <a
+          class="btn-header"
+          href="../pages/contacto.html#solicitarServicio"
+          id="solicitarBtn"
+        >
+          Solicitar servicio</a
+        >
+        <i
+          class="fa-solid fa-bars menu-btn"
+          id="ocultar"
+          onclick="toggleMenu()"
+        ></i>
+      </div>
+    </header>
+
+    <div class="sidebar" id="sidebar">
+      <i class="fa-solid fa-xmark close-btn" onclick="toggleMenu()"></i>
+      <ul>
+        <a href="../index.html#servicios">Servicios</a>
+        <a href="../pages/capacitaciones.html">Capacitaciones</a>
+        <a href="../pages/nosotros.html">Nosotros</a>
+        <a href="../pages/contacto.html">Contáctenos</a>
+      </ul>
+    </div>
+
+    <section class="contenedor-banner">
+      <div class="fondo-contac">
+        <h2>Capacitaciones Profecionales</h2>
+      </div>
+    </section>
+
+    <section class="container mb-5">
+      <div class="row mt-1 g-5">
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
+          <div class="card custom-card">
+            <img
+              src="../img/istockphoto-1356790700-612x612.jpg"
+              class="card-img-top"
+              alt="Asesoría"
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <h5 class="card-title">Mantenimiento de Aire Acondicionado</h5>
+                <p class="card-text">
+                  Mantenimiento preventivo y correctivo en:
+                </p>
+                <ul class="lista-mantenimiento">
+                  <li>
+                    <i class="fa-solid fa-tractor"></i> Maquinaria Agrícola
+                  </li>
+                  <li><i class="fa-solid fa-truck"></i> Maquinaria Pesada</li>
+                  <li><i class="fa-solid fa-car"></i> Vehículo Liviano</li>
+                </ul>
+                <a href="#" class="button-54">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
+          <div class="card custom-card">
+            <img
+              src="../img/Imagen de WhatsApp 2025-02-25 a las 12.53.02_0ceb9e2f.jpg"
+              class="card-img-top"
+              alt="Asesoría"
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <div class="fondo-card-contenido">
+                  <h5 class="card-title">
+                    Mantenimiento de Sistemas Hidráulicos
+                  </h5>
+                  <p class="card-text">
+                    Mantenimiento preventivo y correctivo en:
+                  </p>
+                  <ul class="lista-mantenimiento">
+                    <li>
+                      <i class="fa-solid fa-tractor"></i> Maquinaria Agrícola
+                    </li>
+                    <li><i class="fa-solid fa-truck"></i> Maquinaria Pesada</li>
+                    <li><i class="fa-solid fa-car"></i> Vehículo Liviano</li>
+                  </ul>
+                  <a href="#" class="button-54">Más Información</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
+          <div class="card custom-card">
+            <img
+              src="../img/Imagen de WhatsApp 2025-02-25 a las 12.57.39_ac759b5e.jpg"
+              class="card-img-top"
+              alt="Asesoría"
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <h5 class="card-title">Mantenimiento Preventivo</h5>
+                <p class="card-text">Mantenimiento preventivo de:</p>
+                <ul class="lista-mantenimiento">
+                  <li>
+                    <i class="fa-solid fa-tractor"></i> Maquinaria Agrícola
+                  </li>
+                  <li><i class="fa-solid fa-car"></i> Vehículo Liviano</li>
+                  <li><i class="fa-solid fa-truck"></i> Maquinaria Pesada</li>
+                </ul>
+                <a href="#" class="button-54">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
+          <div class="card custom-card">
+            <img
+              src="../img/electrico.jpg"
+              class="card-img-top"
+              alt="Asesoría"
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <h5 class="card-title">Reparación del Sistema Eléctrico</h5>
+                <p class="card-text">Reparación del sistema eléctrico en:</p>
+                <ul class="lista-mantenimiento">
+                  <li>
+                    <i class="fa-solid fa-tractor"></i> Maquinaria Agrícola
+                  </li>
+                  <li><i class="fa-solid fa-truck"></i> Maquinaria Pesada</li>
+                  <li><i class="fa-solid fa-car"></i> Vehículo Liviano</li>
+                </ul>
+                <a href="#" class="button-54">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
+          <div class="card custom-card">
+            <img
+              src="../img/diacnostico.webp"
+              class="card-img-top"
+              alt="Asesoría"
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <h5 class="card-title">Diagnóstico Electrónico</h5>
+                <p class="card-text">Diagnóstico electrónico en:</p>
+                <ul class="lista-mantenimiento">
+                  <li>
+                    <i class="fa-solid fa-tractor"></i> Maquinaria Agrícola
+                  </li>
+                  <li><i class="fa-solid fa-truck"></i> Maquinaria Pesada</li>
+                  <li><i class="fa-solid fa-car"></i> Vehículo Liviano</li>
+                </ul>
+                <a href="#" class="button-54">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
+          <div class="card custom-card">
+            <img
+              src="../img/inyeccion.webp"
+              class="card-img-top"
+              alt="Asesoría"
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <!-- <h4 class="card-title">consultorías</h4> -->
+                <h5 class="card-title">
+                  Sistema de inyección convencional <br />
+                  sistema de inyección command riel
+                </h5>
+                <br />
+                <br />
+                <a href="#" class="button-54">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
+          <div class="card custom-card">
+            <img src="../img/OIP.jpeg" class="card-img-top" alt="Asesoría" />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <h5 class="card-title">
+                  Uso de scanner y osciloscopio automotriz
+                </h5>
+                <br />
+                <br />
+                <a href="#" class="button-54">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-6"
+        >
+          <div class="card custom-card">
+            <img
+              src="../img/Imagen de WhatsApp 2025-02-25 a las 12.53.53_1457479e.jpg"
+              class="card-img-top"
+              alt="Asesoría"
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <!-- <h4 class="card-title">consultorías</h4> -->
+                <h5 class="card-title">
+                  Operación y mantenimiento de montacargas
+                </h5>
+                <br />
+                <br />
+                <a href="#" class="button-54">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          data-aos="fade-up"
+          data-aos-duration="1500"
+          class="col-lg-4 col-md-12"
+        >
+          <div class="card custom-card">
+            <img
+              src="../img/contaminacion.jpg"
+              class="card-img-top"
+              alt="Asesoría"
+            />
+            <div
+              class="card-img-overlay d-flex flex-column justify-content-end text-center overlay"
+            >
+              <div class="fondo-card">
+                <!-- <h4 class="card-title">consultorías</h4> -->
+                <h5 class="card-title">Manejo de residuos en los talleres</h5>
+                <br />
+                <br />
+                <a href="#" class="button-54">Más Información</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="bg-black d-flex justify-content-center align-items-center text-center text-white"
+    >
+      <div class="container row">
+        <div class="col-lg-4 col-md-6 text-start">
+          <img
+            src="../img/img-footer.webp"
+            alt="Logo footer"
+            class="logo-footer mb-4"
+          />
+          <p class="footer-linea">
+            <i class="fa-solid fa-location-dot icono"></i>Barrio El Salto,
+            Liberia, Guanacaste, Costa Rica
+          </p>
+
+          <p class="footer-linea">
+            <i class="fa-solid fa-envelope icono"></i
+            >electromecanicamora82@gmail.com
+          </p>
+
+          <p class="footer-linea">
+            <i class="fa-brands fa-whatsapp icono"></i>(+506) 6397-3626
+          </p>
+        </div>
+        <div class="col-lg-4 col-md-6 mt-4">
+          <h5 class="titulo-footer">Acceso Rápido</h5>
+          <a href="../index.html#servicios">Servicios</a>
+          <a href="../pages/capacitaciones.html">Capacitaciones</a>
+          <a href="../pages/nosotros.html">Nosotros</a>
+          <a href="../pages/contacto.html">Contáctenos</a>
+        </div>
+        <div class="col-lg-4 col-md-12 mt-4">
+          <img
+            src="../img/whatsapp.png"
+            alt="icono whatsapp"
+            class="whatsapp-icon"
+          />
+          <h5 class="titulo-footer mt-3">¿Preguntas?</h5>
+          <p>
+            Contáctanos por WhatsApp para recibir <br />
+            respuestas rápidas y atención <br />
+            personalizada.
+          </p>
+
+          <a
+            href="https://wa.me/63973626/?text=Gracias%20por%20contactarnos.%20Para%20cualquier%20consulta%20sobre%20nuestros%20servicios%20electromecánicos%20¡Escríbenos%20y%20con%20gusto%20te%20atenderemos!"
+            target="_blank"
+            class="btn-footer"
+            >(+506) 6397-3626</a
+          >
+        </div>
+      </div>
+    </footer>
+    <div class="scroll-top-btn" onclick="scrollToTop()">↑</div>
+
+    <!-- Agregar Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- animaciones -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>
