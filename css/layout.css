@@ -224,17 +224,17 @@ nav ul li a.active::after {
 @media screen and (max-width: 560px) {
   .btn-header {
     border: none;
-    padding: 5px 20px;
+    padding: 3px 18px;
     border-radius: 20px;
     color: var(--color-texto);
-    font-size: 14px;
+    font-size: 13px;
     background-color: var(--color-primario);
     font-weight: 600;
     transition: background-color 0.3s;
   }
 
   .navbar-brand img {
-    height: 75px;
+    height: 70px;
   }
 
   .scroll-top-btn {
