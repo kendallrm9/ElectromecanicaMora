@@ -221,7 +221,7 @@ nav ul li a.active::after {
 }
 
 /* Pantallas muy pequeñas (Max-width: 480px) */
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 560px) {
   .btn-header {
     border: none;
     padding: 5px 20px;
