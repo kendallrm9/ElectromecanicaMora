@@ -1,19 +1,93 @@
+/**************/
+/* Variables */
+/**************/
+:root {
+  /* Colores */
+  --color-primario: #dc3545;
+  --color-secundario: #25d366;
+  --color-fondo: #ffffff;
+  --color-fondo-dark: #000000e8;
+  --color-texto: white;
+  --color-hover: rgb(167, 167, 167);
+  --color-superponer: rgba(0, 0, 0, 0.8);
+
+  /* Fuentes */
+  --fuente-principal: "Questrial", sans-serif;
+}
+
+/**************/
+/* Estilos Globales */
+/**************/
 body {
   overflow-x: hidden;
   transition: background 0.3s ease-in-out;
-  /* width: 100%; */
 }
+/**************/
+/* Estilos del Header */
+/**************/
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #ffffff;
+  background: var(--color-fondo);
   padding: 6px 10%;
+}
+
+.navbar-brand img {
+  height: 90px;
+  width: auto;
+  object-fit: contain;
+}
+
+ul {
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding-bottom: 5px; /* Espacio para evitar que el contenido se mueva */
+  position: relative;
+  display: inline-block;
+}
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 3px;
+  background-color: var(--color-primario);
+  bottom: 0;
+  left: 50%;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+:hover::after,
+nav ul li a.active::after {
+  width: 100%;
+  left: 0;
 }
 .logo {
   font-size: 1.5em;
   font-weight: bold;
 }
+
 .menu-btn {
   font-size: 1.5em;
   cursor: pointer;
@@ -23,96 +97,82 @@ header {
   display: none;
 }
 
-@media (max-width: 1000px) {
-  nav {
-    display: none; /* Mostrar en pantallas grandes */
-  }
-  .menu-btn {
-    display: none; /* Ocultar el botón de menú en pantallas grandes */
-  }
-  #ocultar {
-    display: block;
-  }
-  header {
-    padding: 4px 15px;
-  }
-}
-@media screen and (max-width: 480px) {
-  .btn-header {
-    border: none;
-    padding: 5px 20px;
-    border-radius: 20px;
-    color: white;
-    font-size: 14px;
-    background-color: #dc3545;
-    font-weight: 500;
-    transition: background-color 0.3s;
-    font-weight: 600;
-    /* letter-spacing: 2px; */
-  }
-
-  .navbar-brand img {
-    height: 75px;
-  }
-}
-
-.toggleMenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-}
-.superponer {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease-in-out;
-  z-index: 1;
-}
-.superponer.active {
-  opacity: 1;
-  visibility: visible;
-}
-
+/**************/
+/* Estilos de la barra lateral (Sidebar) */
+/**************/
 .sidebar {
   position: fixed;
   left: -250px;
   top: 0;
   width: 250px;
   height: 100%;
-  background: #000000e8;
-  color: white;
+  background: var(--color-fondo-dark);
+  color: var(--color-texto);
   padding-top: 60px;
   transition: left 0.4s ease-in-out;
   z-index: 9999;
-  font-family: questrial;
+  font-family: var(--fuente-principal);
   font-size: 20px;
   text-align: center;
 }
+
 .sidebar.show {
   left: 0;
 }
+
 .sidebar ul {
   list-style: none;
   padding: 0;
 }
+
 .sidebar ul li {
   padding: 10px;
 }
+
 .sidebar ul li a {
-  color: white;
+  color: var(--color-texto);
   text-decoration: none;
   display: block;
 }
+
 .sidebar ul li a:hover {
-  color: rgb(167, 167, 167);
+  color: var(--color-hover);
 }
 
+/**************/
+/* Estilos para el botón de menú */
+/**************/
+.toggleMenu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+/**************/
+/* Estilos para la superposición (Overlay) */
+/**************/
+.superponer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--color-superponer);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+}
+
+.superponer.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/**************/
+/* Estilos para el botón de cerrar (Close) */
+/**************/
 .close-btn {
   position: absolute;
   top: 16px;
@@ -121,11 +181,14 @@ header {
   cursor: pointer;
 }
 
+/**************/
+/* Estilos para el botón de volver arriba (Scroll top) */
+/**************/
 .scroll-top-btn {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  color: white;
+  color: var(--color-texto);
   border-radius: 50%;
   width: 50px;
   height: 50px;
@@ -136,14 +199,112 @@ header {
   cursor: pointer;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
-  background-color: #dc3545;
+  background-color: var(--color-primario);
 }
+
 .scroll-top-btn:hover {
   background-color: #c40b0bea;
 }
 
+/**************/
+/* Estilos Responsivos */
+/**************/
+/* Pantallas pequeñas (Max-width: 768px) */
+@media (max-width: 768px) {
+  .scroll-top-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    bottom: 15px;
+    right: 15px;
+  }
+}
+
+/* Pantallas muy pequeñas (Max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .btn-header {
+    border: none;
+    padding: 5px 20px;
+    border-radius: 20px;
+    color: var(--color-texto);
+    font-size: 14px;
+    background-color: var(--color-primario);
+    font-weight: 600;
+    transition: background-color 0.3s;
+  }
+
+  .navbar-brand img {
+    height: 75px;
+  }
+
+  .scroll-top-btn {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+    bottom: 10px;
+    right: 10px;
+  }
+}
+
+/* Pantallas grandes (Max-width: 1000px) */
+@media (max-width: 1000px) {
+  nav {
+    display: none; /* Mostrar en pantallas grandes */
+  }
+
+  .menu-btn {
+    display: none; /* Ocultar el botón de menú en pantallas grandes */
+  }
+
+  #ocultar {
+    display: block;
+  }
+
+  header {
+    padding: 4px 15px;
+  }
+}
+
+/**************/
+/* Estilos del botón de WhatsApp y chat */
+/**************/
 .whatsapp-icon {
   height: 50px;
   width: auto;
   object-fit: contain;
+}
+
+.chat-button {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-color: var(--color-secundario);
+  padding: 10px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.chat-button:hover {
+  transform: translateY(-50%) scale(1.1);
+}
+
+.chat-button img {
+  width: 35px;
+  height: 35px;
+}
+
+/* Pantallas pequeñas */
+@media (max-width: 600px) {
+  .chat-button {
+    padding: 8px;
+  }
+
+  .chat-button img {
+    width: 28px;
+    height: 28px;
+  }
 }

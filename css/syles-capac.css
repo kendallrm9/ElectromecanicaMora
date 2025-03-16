@@ -26,7 +26,6 @@
 
 /* Fondo de Card */
 .fondo-card {
-  /* background-color: #000000b6; */
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, #000000b6 40%);
   width: 100%;
   border-radius: 0 0 0px 0px;
@@ -98,4 +97,18 @@
   list-style: none;
   padding: 0;
   text-align: start;
+}
+.contact-container {
+  width: 50%;
+}
+@media screen and (max-width: 1000px) {
+  .contact-container {
+    width: 75%;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .contact-container {
+    width: 100%;
+  }
 }
