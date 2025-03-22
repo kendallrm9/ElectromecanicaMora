@@ -16,9 +16,7 @@ $mensaje = htmlspecialchars($_POST["mensaje"], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF
 $fecha_envio = date("d/m/Y H:i:s");
 
 // Configuración del servidor SMTP
-$smtpHost = 'smtp.hostinger.com';
-$smtpUser = 'servicios@electromecanicamora.com';
-$smtpPass = 'Mora200123.';
+
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
@@ -39,8 +37,8 @@ try {
   $mail->Encoding = 'base64';
 
   //Recipients
-  $mail->setFrom('servicios@electromecanicamora.com', 'Eduardo Mora');
-  $mail->addAddress('kendallrm9@gmail.com', 'Kendall reyes');    //Add a recipient
+  $mail->setFrom('tucorreo@gmail.com', 'mi nombre');
+  $mail->addAddress('tucorreo@gmail.com', 'mi nombre');    //Add a recipient
   // $mail->addAddress('ellen@example.com');               //Name is optional
   // $mail->addReplyTo('info@example.com', 'Information');
   // $mail->addCC('cc@example.com');
