@@ -67,7 +67,7 @@
       <div class="toggleMenu">
         <a
           class="btn-header"
-          href="../pages/contacto.html#solicitarServicio"
+          href="../pages/contacto.html#formulario-contacto"
           id="solicitarBtn"
         >
           Solicitar servicio</a
@@ -154,26 +154,99 @@
             contacto!
           </h2>
           <div class="line"></div>
-          <form>
-            <input type="text" placeholder="Nombre" id="nombre" required />
-            <input type="number" placeholder="Teléfono" required />
+          <form id="formulario-contacto">
+            <input
+              type="text"
+              placeholder="Nombre"
+              id="nombre"
+              name="nombre"
+              required
+            />
+            <div>
+              <input
+                type="number"
+                class="form-control"
+                placeholder="Teléfono"
+                id="telefono"
+                required
+                name="numero"
+              />
+              <div id="errorTelefono" class="invalid-feedback">
+                Ingrese un número de teléfono válido (8 dígitos).
+              </div>
+            </div>
             <input
               type="email"
               placeholder="Dirección de correo electrónico"
               required
+              name="email"
             />
             <select required id="servicio">
               <option value="" disabled selected>Seleccione el servicio</option>
-              <option value="0">Taller de servicio</option>
-              <option value="1">Asesorías</option>
-              <option value="2">Consultorías</option>
-              <option value="3">Capacitaciones</option>
-              <option value="4">Otro</option>
+              <option value="Taller de servicio">Taller de servicio</option>
+              <option value="Asesorías">Asesorías</option>
+              <option value="Consultorías">Consultorías</option>
+              <option value="Capacitaciones">Capacitaciones</option>
+              <option value="Otro">Otro</option>
             </select>
 
-            <textarea placeholder="Mensaje" required></textarea>
+            <select
+              required
+              id="curso"
+              name="Capacitaciones"
+              style="display: none"
+            >
+              <option value="" disabled selected>
+                Seleccione la capacitación
+              </option>
+              <option value="Mantenimiento de Aire Acondicionado">
+                Mantenimiento de Aire Acondicionado
+              </option>
+              <option value="Mantenimiento de Sistemas Hidráulicos">
+                Mantenimiento de Sistemas Hidráulicos
+              </option>
+              <option value="Mantenimiento Preventivo">
+                Mantenimiento Preventivo
+              </option>
+              <option value="Reparación del Sistema Eléctrico">
+                Reparación del Sistema Eléctrico
+              </option>
+              <option value="Diagnóstico Electrónico">
+                Diagnóstico Electrónico
+              </option>
+              <option
+                value="Sistema de inyección convencional sistema de inyección command
+              riel"
+              >
+                Sistema de inyección convencional sistema de inyección command
+                riel
+              </option>
+              <option value="Uso de scanner y osciloscopio automotriz">
+                Uso de scanner y osciloscopio automotriz
+              </option>
+              <option value="Operación y mantenimiento de montacargas">
+                Operación y mantenimiento de montacargas
+              </option>
+              <option value="Manejo de residuos en los talleres">
+                Manejo de residuos en los talleres
+              </option>
+            </select>
 
-            <button class="btn-form" type="submit">Enviar</button>
+            <textarea placeholder="Mensaje" name="mensaje" required></textarea>
+
+            <div class="d-flex align-items-center gap-3">
+              <button class="btn-form" type="submit" value="Enviar">
+                Enviar
+              </button>
+              <div
+                id="spinner"
+                class="spinner-border text-light"
+                role="status"
+                style="display: none"
+              >
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
           </form>
         </div>
       </div>
@@ -264,5 +337,6 @@
     <!-- animaciones -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/main.js"></script>
+    <script src="../js/correo.js"></script>
   </body>
 </html>

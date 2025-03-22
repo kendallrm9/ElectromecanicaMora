@@ -1,5 +1,10 @@
 'use strict'; 
 
+/* Animaciones */
+AOS.init({
+  once: true,
+});
+
 // Alterna la visibilidad del menú lateral y la superposición.
 function toggleMenu() {
   const sidebar = document.getElementById("sidebar");
@@ -32,18 +37,18 @@ document.addEventListener("DOMContentLoaded", function () {
   observer.observe(overlay, { attributes: true, attributeFilter: ["class"] });
 });
 
-/* Animaciones */
-AOS.init({
-  once: true, 
+// Mostrar el input capacitación en la página Contáctenos
+const selectServicio = document.querySelector('#servicio');
+const selectCapacitacion = document.querySelector('#curso');
+
+selectServicio.addEventListener('change', () => {
+  
+  (selectServicio.value == "Capacitaciones") ?
+    selectCapacitacion.style.display = 'inline-block' :
+    selectCapacitacion.style.display = 'none';
+
 });
 
-/* Redirección al formulario de cursos */
-const dropdown = document.querySelector("#curso");
-const cursos = document.querySelectorAll(".button-54");
 
-cursos.forEach(curso => {
-  curso.addEventListener('click', () => {
-    let indice = Array.from(cursos).indexOf(curso);
-    dropdown.value = indice;
-  });
-});
+
+

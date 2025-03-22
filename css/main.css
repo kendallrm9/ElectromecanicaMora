@@ -29,10 +29,8 @@ body {
 
 .titulo-banner {
   font-weight: 400;
-  /* color: #3ab2f8; */
   text-align: center;
   font-size: 60px;
-  /* font-style: italic; */
   font-family: Lexend;
 }
 
@@ -53,7 +51,6 @@ body {
   background-color: #dc3545;
   font-family: "Questrial", serif;
   transition: background-color 0.4s;
-  /* letter-spacing: 2px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -86,6 +83,12 @@ body {
   border-radius: 30px;
 }
 
+.card-asesoria {
+  object-position: left center;
+}
+.card-capacitaciones {
+  object-position: right center;
+}
 /* Estilos de Card */
 .custom-card {
   border-radius: 30px;
@@ -111,8 +114,6 @@ body {
   width: 100%;
   border-radius: 0 0 30px 30px;
   color: rgb(255, 255, 255);
-  /* border-top-left-radius: 12%; */
-  /* border-top-right-radius: 12%; */
   height: 45%;
   display: flex;
   flex-direction: column;
