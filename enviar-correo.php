@@ -16,7 +16,9 @@ $mensaje = htmlspecialchars($_POST["mensaje"], ENT_QUOTES | ENT_SUBSTITUTE, 'UTF
 $fecha_envio = date("d/m/Y H:i:s");
 
 // Configuración del servidor SMTP
-
+$smtpHost = 'smtp.hostinger.com';
+$smtpUser = 'servicios@electromecanicamora.com';
+$smtpPass = 'Mora200123.';
 
 //Create an instance; passing `true` enables exceptions
 $mail = new PHPMailer(true);
